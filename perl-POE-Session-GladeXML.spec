@@ -6,8 +6,8 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	POE
 %define	pnam	Session-GladeXML
-Summary:	POE::Session::GladeXML - emit POE events for Gtk callbacks
-Summary(pl):	POE::Session::GladeXML - wywo³ywanie zdarzeñ POE dla callbacków Gtk
+Summary:	POE::Session::GladeXML - emit POE events for GTK+ callbacks
+Summary(pl):	POE::Session::GladeXML - wywo³ywanie zdarzeñ POE dla callbacków GTK+
 Name:		perl-POE-Session-GladeXML
 Version:	0.1.3
 Release:	1

@@ -5,8 +5,8 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	POE
 %define	pnam	Session-GladeXML
-Summary:	POE::Session::GladeXML -- emit POE events for Gtk callbacks
-#Summary(pl):	
+Summary:	POE::Session::GladeXML - emit POE events for Gtk callbacks
+Summary(pl):	POE::Session::GladeXML - wywo³ywanie zdarzeñ POE dla callbacków Gtk
 Name:		perl-POE-Session-GladeXML
 Version:	0.1.3
 Release:	1
@@ -28,8 +28,10 @@ A simple helper module that lets you connect callback names from your
 .glade file with methods of an object. These methods are called as POE
 postback methods.
 
-# %description -l pl
-# TODO
+%description -l pl
+Prosty modu³ pomocniczy pozwalaj±cy na ³±czenie nazw callbacków z
+pliku .glade z metodami obiektu. Te metody s± nazywane tak, jak metody
+postback POE.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}

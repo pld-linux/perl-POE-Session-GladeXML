@@ -1,6 +1,7 @@
 #
 # Conditional build:
-%bcond_without	tests	# do not perform "make test"
+%bcond_with	tests	# perform "make test"
+			# require DISPLAY
 #
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	POE
@@ -17,9 +18,12 @@ Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
-BuildRequires:	perl-Gtk-GladeXML >= 0.7008
+BuildRequires:	perl-gtk-GladeXML >= 0.7008
 BuildRequires:	perl-POE >= 0.23
 %endif
+Requires:	perl-POE
+Requires:	perl-gtk
+Requires:	perl-gtk-GladeXML
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 

@@ -2,10 +2,10 @@
 # Conditional build:
 %bcond_with	tests	# perform "make test"
 			# require DISPLAY
-#
-%include	/usr/lib/rpm/macros.perl
+
 %define		pdir	POE
 %define		pnam	Session-GladeXML
+%include	/usr/lib/rpm/macros.perl
 Summary:	POE::Session::GladeXML - emit POE events for GTK+ callbacks
 Summary(pl.UTF-8):	POE::Session::GladeXML - wywoływanie zdarzeń POE dla callbacków GTK+
 Name:		perl-POE-Session-GladeXML
@@ -15,11 +15,12 @@ License:	GPL v2
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	27f4d1bc11e96b5705aeff0ae04b3850
+URL:		http://search.cpan.org/dist/POE-Session-GladeXML/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
-BuildRequires:	perl-gtk-GladeXML >= 0.7008
 BuildRequires:	perl-POE >= 0.23
+BuildRequires:	perl-gtk-GladeXML >= 0.7008
 %endif
 Requires:	perl-POE
 Requires:	perl-gtk
